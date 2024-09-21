@@ -1,14 +1,11 @@
 .profile {
     padding: 0;
-    margin: 0;
-    /*background-image: url("Assets/Images/pexels-natri-129208.jpg");*/
     background: linear-gradient(to right, #0e0e12, #000000);
-    /*background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;*/
     width: 100%;
     height: 100%;
     overflow: hidden;
+    margin: auto;
+    position: relative;
 }
 
 .profile .data {
@@ -21,7 +18,12 @@
     border: 2px solid #ffffff18;
     border-radius: 20px;
     text-align: center;
-    margin: 30px auto 0 auto;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 
 .profile .data img {
@@ -43,5 +45,66 @@
 
 .row {
     padding: 20px;
-    display: block;
+}
+
+.fila {
+    margin-bottom: 20px;
+    display: inline-table;
+}
+
+.fila label {
+    color: #aeaeae;
+    padding: 15px 0;
+    width: 100%;
+    font-size: 16px;
+}
+
+.cont-social {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.Social {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    padding-top: 11px;
+    position: relative;
+    margin: auto;
+    display: inline-block;
+}
+
+.Social#LinkedIn {
+    background-color: rgb(21, 72, 213);
+}
+
+.Social#GitHub {
+    background-color: rgb(66, 71, 83);
+}
+
+
+.Social#Instagram {
+    background: linear-gradient(to bottom, rgb(201, 5, 5), rgb(226, 5, 64), rgb(212, 162, 0));
+}
+.Social#Telegram {
+    background-color: rgb(28, 43, 80);
+}
+.Social#WhatsApp {
+    background-color: rgb(21, 176, 34);
+}
+.Social#eMail {
+    background-color: rgb(77, 112, 194);
+}
+
+
+.btnSocial a {
+    width: 50px;
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.btnSocial a:hover {
+    text-decoration: none;
 }
