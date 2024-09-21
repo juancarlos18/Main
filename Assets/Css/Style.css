@@ -105,6 +105,32 @@
     font-weight: 600;
 }
 
+.btnSocial button {
+    width: 50px;
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    background: none;
+    border: none;
+}
+
 .btnSocial a:hover {
     text-decoration: none;
+}
+
+
+.foot {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #181818;
+    padding: 10px 0;
+}
+
+.foot label::before {
+    content: 'Todos los derechos reservados - Juan Carlos Chapoñan S.';
+    color: #FFFFFF;
+    font-size: 14px;
 }
