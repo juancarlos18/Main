@@ -6,7 +6,7 @@ body {
 
 .profile {
     padding: 0;
-    background: linear-gradient(2deg, #181823, #000000);
+    background: linear-gradient(150deg, #181823, #000000, #000000);
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -18,7 +18,7 @@ body {
     background-color: #0000001b;
     backdrop-filter: blur(10px);
     padding: 0 0 20px 0px;
-    width: min(400px, 88%);
+    width: min(380px, 88%);
     height: 640px;
     align-items: center;
     border: 2px solid #ffffff18;
@@ -40,20 +40,27 @@ body {
 }
 
 .profile .data .name::before {
-    content: "Juancarlos";
+    content: "JUANCARLOS";
+    letter-spacing: 5px;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .profile .data .footImg {
     position: relative;
     height: 110px;
-    background: linear-gradient(to bottom, #00000000, #0b0b0c);
+    background: linear-gradient(to bottom, #00000000, #000000);
     width: 100%;
     margin-top: -110px;
 }
 
 .profile .data .name {
-    background: linear-gradient(to  right, rgb(10, 102, 250), rgb(237, 124, 11));
+    background-image: -webkit-linear-gradient(180deg, rgb(250, 150, 10), rgb(10, 102, 250));
     background-clip: text;
+    animation: AnimatedText 20s infinite linear;
+    -webkit-background-clip: text;
+    -webkit-animation: AnimatedText 20s infinite linear;
     background-size: 100%;
     color: transparent;
     margin-top: 10px;
@@ -64,9 +71,11 @@ body {
 }
 
 .Content-Social label {
-    color: #ffffffb4;
+    color: #FFFFFF;
     font-weight: 600;
-    margin: 30px 0 15px 0;
+    font-size: 16px;
+    margin: 40px 0 15px 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 .Social {
@@ -81,7 +90,7 @@ body {
     width: 50px;
     border-radius: 50%;
     text-decoration: none;
-    color: #FFFFFF;
+    color: #ebf2ffaa;
     box-sizing: border-box;
     flex-shrink: 0;
     font-weight: 600;
@@ -120,6 +129,9 @@ body {
 .Social button:hover {
     background-color: var(--accent-color);
     fill: #FFFFFF;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    background: none;
 }
 
 .Social a::after,
@@ -142,21 +154,13 @@ body {
     text-decoration: none;
 }
 
-.Social a:hover,
-.Social button:hover {
-    /*color: #000000;
-    background-color: #FFFFFF;*/
-    border: 2px solid #FFFFFF;
-    background: none;
-}
-
 
 .foot {
     position: absolute;
     bottom: 0;
     width: 100%;
     text-align: center;
-    background-color: #00000041;
+    background: linear-gradient(to top, #00000000, #000000);
     padding-top: 5px;
 }
 
@@ -165,8 +169,22 @@ body {
 }
 
 .foot label::before {
-    content: 'Juan Carlos Chapo\00F1 an S.';
+    font-family: 'Poppins', sans-serif;
+    content: 'Juan Carlos Chapo\00F1 an S.  -  2004';
     color: #ffffff82;
     font-size: 12px;
     margin-left: 5px;
+}
+
+
+
+/* Animation */
+
+@-webkit-keyframes AnimatedText {
+    from {
+      -webkit-filter: hue-rotate(0deg);
+    }
+    to {
+      -webkit-filter: hue-rotate(-360deg);
+    }
 }
