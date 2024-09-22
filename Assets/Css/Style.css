@@ -1,6 +1,6 @@
 .profile {
     padding: 0;
-    background: linear-gradient(to right, #0e0e12, #000000);
+    background: linear-gradient(2deg, #0e0e12, #000000);
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -89,28 +89,6 @@
     background-color: #FFFFFF;
 }
 
-.Social#LinkedIn {
-    color: rgb(21, 72, 213);
-}
-
-.Social#GitHub {
-    color: rgb(66, 71, 83);
-}
-
-
-.Social #Instagram {
-    background: linear-gradient(to bottom, rgb(201, 5, 5), rgb(226, 5, 64), rgb(212, 162, 0));
-}
-.Social#Telegram {
-    color: rgb(28, 43, 80);
-}
-.Social#WhatsApp {
-    color: rgb(21, 176, 34);
-}
-.Social#eMail {
-    color: rgb(77, 112, 194);
-}
-
 
 .btnSocial a {
     width: 50px;
@@ -118,7 +96,7 @@
     color: white;
     font-size: 30px;
     font-weight: 600;
-    transition: all .3s;
+    transition: all .3s ease;
 }
 
 .btnSocial button {
@@ -129,7 +107,7 @@
     font-weight: 600;
     background: none;
     border: none;
-    transition: all .3s;
+    transition: all .3s ease;
 }
 
 .btnSocial a:hover {
@@ -147,12 +125,17 @@
     bottom: 0;
     width: 100%;
     text-align: center;
-    background-color: #181818;
+    background-color: #00000041;
     padding: 10px 0;
+}
+
+.foot p {
+    color: #ffffffad;
 }
 
 .foot label::before {
     content: 'Juan Carlos Chapo\00F1 an S.';
     color: #ffffff82;
     font-size: 12px;
+    margin-left: 5px;
 }
