@@ -1,3 +1,9 @@
+body {
+    display: grid;
+    place-items: center;
+    background: #000000;
+}
+
 .profile {
     padding: 0;
     background: linear-gradient(2deg, #12121a, #000000);
@@ -12,8 +18,8 @@
     background-color: #0000001b;
     backdrop-filter: blur(10px);
     padding: 0 0 20px 0px;
-    width: min(400px, 90%);
-    height: 650px;
+    width: min(400px, 85%);
+    height: 640px;
     align-items: center;
     border: 2px solid #ffffff18;
     border-radius: 20px;
@@ -57,67 +63,91 @@
     padding: 20px;
 }
 
-.fila {
-    margin-bottom: 20px;
-    display: inline-table;
-}
-
-.fila label {
-    color: #aeaeae;
-    padding: 15px 0;
-    width: 100%;
-    font-size: 16px;
+.Content-Social label {
+    color: #ffffffb4;
     font-weight: 600;
-}
-
-.cont-social {
-    display: inline-block;
-    margin-bottom: 15px;
+    margin: 30px 0 15px 0;
 }
 
 .Social {
-    border-radius: 50%;
+    display: flex;
+    transition: all .3s;
+    gap: 20px
+}
+
+.Social a,
+.Social button {
     height: 50px;
     width: 50px;
-    padding-top: 10px;
-    position: relative;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    font-weight: 600;
+    transition: all .3s ease;
+    display: grid;
+    place-items: center;
     margin: auto;
-    display: inline-block;
-    transition: all .3s;
+    border: 2px solid #ffffff00;
 }
 
-.Social:hover {
-    background-color: #FFFFFF;
-}
-
-
-.btnSocial a {
-    width: 50px;
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
-    font-weight: 600;
-    transition: all .3s ease;
-}
-
-.btnSocial button {
-    width: 50px;
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
-    font-weight: 600;
+.Social button {
     background: none;
-    border: none;
-    transition: all .3s ease;
+    font-size: 25px;
 }
 
-.btnSocial a:hover {
+.Social a svg {
+    height: 25px;
+}
+
+.Social a::before,
+.Social button::before {
+    content: attr(data-social);
+    position: absolute;
+    background-color: var(--accent-color);
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 25px;
+    transform: translateY(-30px) rotate(25deg);
+    font-size: 14px;
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.Social a:hover,
+.Social button:hover {
+    background-color: var(--accent-color);
+    fill: #FFFFFF;
+}
+
+.Social a::after,
+.Social button::after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    transform: translateY(0) rotate(25deg);
+    opacity: 0;
+}
+
+.Social a:hover::before,
+.Social button:hover::before {
+    transform: translateY(-54px) rotate(0);
+    opacity: 1;
+}
+
+.Social a:hover {
     text-decoration: none;
 }
 
-.Social:hover a,
-.Social:hover button {
-    color: #000000;
+.Social a:hover,
+.Social button:hover {
+    /*color: #000000;
+    background-color: #FFFFFF;*/
+    border: 2px solid #FFFFFF;
+    background: none;
 }
 
 
