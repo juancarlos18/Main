@@ -6,7 +6,7 @@ body {
 
 .profile {
     padding: 0;
-    background: linear-gradient(160deg, #171426, #000000, #000000);
+    background: linear-gradient(160deg, #141426, #000000, #000000, #1b1426);
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -18,10 +18,10 @@ body {
     background-color: #0000001b;
     backdrop-filter: blur(10px);
     padding: 0 0 20px 0px;
-    width: min(360px, 88%);
-    height: 640px;
+    width: min(370px, 88%);
+    height: 650px;
     align-items: center;
-    border: 2px solid #ffffff18;
+    border: 2px solid #ffffff11;
     border-radius: 20px;
     text-align: center;
     margin: auto;
@@ -71,25 +71,35 @@ body {
 }
 
 .profile .data .description {
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .profile .data .description::before {
-    content: 'Informaci\00F3 n profesional, proyectos y contacto';
+    content: 'Systems Engineer';
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.profile .data .txtRow {
+    margin-top: 10px;
+}
+
+.profile .data .txtRow::before {
+    content: 'Professional profile and contact';
     font-size: 14px;
     color: #ffffff85;
 }
 
-.Content-Social label {
+.Content-Social .txtRowSocial {
     color: #ffffff85;
     font-size: 14px;
-    margin-top: 40px;
+    margin: 20px auto 15px auto;
     font-family: 'Poppins', sans-serif;
     line-break: normal;
 }
 
-.Content-Social label::before {
-    content: 'Redes sociales';
+.Content-Social .txtRowSocial::before {
+    content: 'Social networks';
 }
 
 .Social {
@@ -112,12 +122,12 @@ body {
     display: grid;
     place-items: center;
     margin: auto;
-    border: 2px solid #ffffff00;
 }
 
 .Social button {
     background: none;
     font-size: 25px;
+    border: none;
 }
 
 .Social a svg {
@@ -134,7 +144,7 @@ body {
     padding: 0.5em 1em;
     border-radius: 25px;
     transform: translateY(-30px) rotate(25deg);
-    font-size: 14px;
+    font-size: 12px;
     opacity: 0;
     transition: .3s ease;
 }
@@ -144,7 +154,6 @@ body {
     background-color: var(--accent-color);
     fill: #FFFFFF;
     color: #FFFFFF;
-    border: 2px solid #FFFFFF;
     background: none;
 }
 
@@ -174,7 +183,7 @@ body {
     bottom: 0;
     width: 100%;
     text-align: center;
-    background: linear-gradient(to top, #00000000, #000000);
+    background: #00000091;
     padding-top: 5px;
 }
 
@@ -186,7 +195,7 @@ body {
     font-family: 'Poppins', sans-serif;
     content: 'Juan Carlos Chapo\00F1 an S.  -  2004';
     color: #ffffff82;
-    font-size: 12px;
+    font-size: 10px;
     margin-left: 5px;
 }
 
