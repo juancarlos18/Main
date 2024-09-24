@@ -1,12 +1,73 @@
+
 body {
-    display: grid;
-    place-items: center;
-    background: #000000;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(160deg, #141426, #000000, #000000, #130d1d);
+    transition: all .3s;
 }
+
+body.light {
+    background: linear-gradient(160deg, #7c99e7, #e1e1e1, #e1e1e1, #6b67e2);
+}
+
+.mode {
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding-top: 5%;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+  
+.checkbox-label {
+    background-color: #31304b;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 0;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.fa-moon {
+    color: #f1c40f;
+}
+  
+.fa-sun {
+    color: #f39c12;
+}
+  
+.checkbox-label .ball {
+    background-color: #fff;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+  
+.checkbox:checked + .checkbox-label .ball {
+    transform: translateX(24px);
+}
+
 
 .profile {
     padding: 0;
-    background: linear-gradient(160deg, #141426, #000000, #000000, #1b1426);
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -18,7 +79,7 @@ body {
     background-color: #0000001b;
     backdrop-filter: blur(10px);
     padding: 0 0 20px 0px;
-    width: min(370px, 88%);
+    width: min(380px, 88%);
     height: 650px;
     align-items: center;
     border: 2px solid #ffffff11;
@@ -31,6 +92,10 @@ body {
     top: 0;
     bottom: 0;
     overflow: hidden;
+}
+
+.profile .data.light {
+    background-color: #ffffff1b;
 }
 
 .profile .data img {
@@ -55,6 +120,10 @@ body {
     margin-top: -110px;
 }
 
+.profile .data .footImg.light {
+    background: linear-gradient(to bottom, #FFFFFF00, #FFFFFF);
+}
+
 .profile .data .name {
     background-image: -webkit-linear-gradient(180deg, rgb(250, 150, 10), rgb(10, 102, 250));
     background-clip: text;
@@ -63,7 +132,16 @@ body {
     -webkit-animation: AnimatedText 20s infinite linear;
     background-size: 100%;
     color: transparent;
-    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.profile .data .contBody {
+    background: linear-gradient(to bottom, #000000, #00000000);
+    transition: all .3s;
+}
+
+.profile .data .contBody.light {
+    background: linear-gradient(to bottom, #FFFFFF, #FFFFFF00);
 }
 
 .row {
@@ -72,22 +150,33 @@ body {
 
 .profile .data .description {
     margin-top: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFFFFF;
+    transition: all .6s;
 }
 
 .profile .data .description::before {
     content: 'Systems Engineer';
-    font-size: 14px;
-    color: #FFFFFF;
+}
+
+.profile .data .description.light {
+    color: #000000;
 }
 
 .profile .data .txtRow {
     margin-top: 10px;
+    font-size: 14px;
+    color: #ffffff85;
+    transition: all .6s;
 }
 
 .profile .data .txtRow::before {
     content: 'Professional profile and contact';
-    font-size: 14px;
-    color: #ffffff85;
+}
+
+.profile .data .txtRow.light {
+    color: #000000;
 }
 
 .Content-Social .txtRowSocial {
@@ -96,10 +185,15 @@ body {
     margin: 20px auto 15px auto;
     font-family: 'Poppins', sans-serif;
     line-break: normal;
+    transition: all .6s;
 }
 
 .Content-Social .txtRowSocial::before {
     content: 'Social networks';
+}
+
+.Content-Social .txtRowSocial.light {
+    color: #000000;
 }
 
 .Social {
@@ -117,7 +211,7 @@ body {
     color: #ebf2ffaa;
     box-sizing: border-box;
     flex-shrink: 0;
-    font-weight: 600;
+    font-weight: 500;
     transition: all .3s ease;
     display: grid;
     place-items: center;
@@ -128,6 +222,11 @@ body {
     background: none;
     font-size: 25px;
     border: none;
+}
+
+.Social a.light,
+.Social button.light {
+    color: #37393baa;
 }
 
 .Social a svg {
@@ -157,6 +256,11 @@ body {
     background: none;
 }
 
+.Social a:hover.light,
+.Social button:hover.light {
+    color: #000000;
+}
+
 .Social a::after,
 .Social button::after {
     content: '';
@@ -169,7 +273,7 @@ body {
 
 .Social a:hover::before,
 .Social button:hover::before {
-    transform: translateY(-50px) rotate(0);
+    transform: translateY(-45px) rotate(0);
     opacity: 1;
 }
 
@@ -185,18 +289,38 @@ body {
     text-align: center;
     background: #00000091;
     padding-top: 5px;
+    transition: all .3s;
+}
+
+.foot.light {
+    background: #0000000d;
 }
 
 .foot p {
     color: #ffffffad;
+    transition: all .6s;
 }
 
-.foot label::before {
+.foot p.light {
+    color: #000000;
+}
+
+.foot .author {
     font-family: 'Poppins', sans-serif;
     content: 'Juan Carlos Chapo\00F1 an S.  -  2004';
     color: #ffffff82;
     font-size: 10px;
+    font-weight: 600;
     margin-left: 5px;
+    transition: all .6s;
+}
+
+.foot .author::before {
+    content: 'Juan Carlos Chapo\00F1 an S.  -  2004';
+}
+
+.foot .author.light {
+    color: #000000;
 }
 
 
@@ -209,5 +333,14 @@ body {
     }
     to {
       -webkit-filter: hue-rotate(-360deg);
+    }
+}
+
+@-webkit-keyframes Light {
+    from {
+        background-position:-280px -94px;
+    }
+    to {
+        background-position:680px -94px;
     }
 }

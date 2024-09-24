@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Juancarlos</title>
@@ -25,12 +27,23 @@
 
     <body>
         <div class="profile">
+            <div class="mode">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <span class="ball"></span>
+                </label>
+            </div>
+
             <div class="data">
                 <img src="Assets/Images/Photo profile.jpg" alt="">
                 <div class="footImg"></div>
-                <h3 class="name"></h3>
-                <p class="description"></p>
-                <label class="txtRow"></label>
+                <div class="contBody">
+                    <h3 class="name"></h3>
+                    <p class="description"></p>
+                    <label class="txtRow"></label>
+                </div>
                 <div class="row">
                     <div class="Social">
                         <a data-social="LinkedIn" style="--accent-color: #3752cd;" href="https://www.linkedin.com/in/juan-carlos-chapo%C3%B1an-sernaque-594848123/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -51,7 +64,7 @@
                 </div>
             </div>
             <div class="foot">
-                <p><i class="fa-brands fa-github"></i> <label></label></p>
+                <p><i class="fa-brands fa-github"></i> <label class="author"></label></p>
             </div>
         </div>
     </body>
