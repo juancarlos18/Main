@@ -14,6 +14,10 @@ body.light {
     background: linear-gradient(133deg, #849feb, #ededed, #7b78e4);
 }
 
+
+
+/* Dark / Light mode */
+
 .mode {
     text-align: center;
     margin: auto;
@@ -65,6 +69,11 @@ body.light {
     transform: translateX(24px);
 }
 
+/* Dark / Light mode */
+
+
+
+/* Card */
 
 .profile {
     padding: 0;
@@ -281,6 +290,11 @@ body.light {
     text-decoration: none;
 }
 
+/* Card */
+
+
+
+/* Author */
 
 .foot {
     position: absolute;
@@ -322,6 +336,8 @@ body.light {
 .foot .author.light {
     color: #000000;
 }
+
+/* Autor */
 
 
 
