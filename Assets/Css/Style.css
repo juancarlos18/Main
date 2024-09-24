@@ -11,7 +11,7 @@ body {
 }
 
 body.light {
-    background: linear-gradient(133deg, #849feb, #ededed, #7b78e4);
+    background: linear-gradient(140deg, #9cb3f3, #ecedf7, #8b87ec);
 }
 
 
@@ -130,7 +130,7 @@ body.light {
 }
 
 .profile .data .footImg.light {
-    background: linear-gradient(to bottom, #FFFFFF00, #FFFFFF);
+    background: linear-gradient(to bottom, #f7f8ff00, #f7f8ff);
 }
 
 .profile .data .name {
@@ -150,7 +150,7 @@ body.light {
 }
 
 .profile .data .contBody.light {
-    background: linear-gradient(to bottom, #FFFFFF, #FFFFFF00);
+    background: linear-gradient(to bottom, #f7f8ff, #f7f8ff00);
 }
 
 .row {
