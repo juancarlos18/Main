@@ -1,71 +1,84 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Juancarlos</title>
-        <link rel="icon" type="image/x-icon" href="Assets/Icons/Logo.ico">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <script src="Assets/Js/JQuery/jquery-3.7.1.min.js"></script>
-        <script src="Assets/Js/Bootstrap/bootstrap-5.3.3-dist/bootstrap.min.js"></script>
-        <script src="Assets/Icons/fontawesome-free-6.5.2-web/js/all.min.js"></script>
-        <script src="Assets/Js/Js.js"></script>
-        
-        <link rel="stylesheet" href="Assets/Css/Bootstrap/bootstrap-5.3.3-dist/bootstrap.min.css">
-        <link rel="stylesheet" href="Assets/Css/Style.css">
-        <link rel="stylesheet" href="Assets/Fonts/Poppins/">
-        <link rel="stylesheet" href="Assets/Icons/fontawesome-free-6.5.2-web/css/all.min.css">
+    <title>Juancarlos</title>
+    <link rel="icon" type="image/x-icon" href="Assets/Icons/Logo.ico">
 
-        <style>
-            @font-face {
-                font-family: 'Poppins';
-                src: url('Assets/Fonts/Poppins/Poppins-Regular.ttf');
-            }
-        </style>
-    </head>
+    <script src="Assets/Js/JQuery/jquery-3.7.1.min.js"></script>
+    <script src="Assets/Js/Bootstrap/bootstrap-5.3.3-dist/bootstrap.min.js"></script>
+    <script src="Assets/Icons/fontawesome-free-6.5.2-web/js/all.min.js"></script>
+    <script src="Assets/Js/Js.js"></script>
 
-    <body>
-        <div class="profile">
-            <div class="mode">
-                <input type="checkbox" class="checkbox" id="checkbox">
-                <label for="checkbox" class="checkbox-label">
-                    <i class="fa-solid fa-moon"></i>
-                    <i class="fa-solid fa-sun"></i>
-                    <span class="ball"></span>
-                </label>
+    <link rel="stylesheet" href="Assets/Css/Bootstrap/bootstrap-5.3.3-dist/bootstrap.min.css">
+    <link rel="stylesheet" href="Assets/Css/Style.css">
+    <link rel="stylesheet" href="Assets/Fonts/Poppins/">
+    <link rel="stylesheet" href="Assets/Icons/fontawesome-free-6.5.2-web/css/all.min.css">
+
+    <style>
+        @font-face {
+            font-family: 'Poppins';
+            src: url('Assets/Fonts/Poppins/Poppins-Regular.ttf');
+        }
+    </style>
+</head>
+
+<body>
+    <div class="profile">
+        <div class="mode">
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbox-label">
+                <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-sun"></i>
+                <span class="ball"></span>
+            </label>
+        </div>
+
+        <div class="data">
+            <img src="Assets/Images/Photo.JPEG" alt="">
+            <div class="footImg"></div>
+            <div class="contBody">
+                <h3 class="name"></h3>
+                <p class="description"></p>
+                <label class="txtRow"></label>
             </div>
-
-            <div class="data">
-                <img src="Assets/Images/Photo profile.jpg" alt="">
-                <div class="footImg"></div>
-                <div class="contBody">
-                    <h3 class="name"></h3>
-                    <p class="description"></p>
-                    <label class="txtRow"></label>
+            <div class="row">
+                <div class="Social">
+                    <a data-social="LinkedIn" style="--accent-color: #3752cd;"
+                        href="https://www.linkedin.com/in/juan-carlos-chapo%C3%B1an-sernaque-594848123/"
+                        target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a data-social="GitHub" style="--accent-color: #2e2f33;" href="https://github.com/juancarlos18"
+                        target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <button id="btneMail" data-social="Outlook" style="--accent-color: #364fc1;"><i
+                            class="fa-brands fa-microsoft"></i></button>
                 </div>
-                <div class="row">
+
+                <div class="Content-Social">
+                    <label class="txtRowSocial"></label>
                     <div class="Social">
-                        <a data-social="LinkedIn" style="--accent-color: #3752cd;" href="https://www.linkedin.com/in/juan-carlos-chapo%C3%B1an-sernaque-594848123/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a data-social="GitHub" style="--accent-color: #2e2f33;" href="https://github.com/juancarlos18" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        <button id="btneMail" data-social="Outlook" style="--accent-color: #364fc1;"><i class="fa-brands fa-microsoft"></i></button>
-                    </div>
-
-                    <div class="Content-Social">
-                        <label class="txtRowSocial"></label>
-                        <div class="Social">
-                            <a data-social="Instagram" style="--accent-color: rgb(232, 31, 74);" href="https://www.instagram.com/juancarlos.i18/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                            <a data-social="X" style="--accent-color: #2e2f33;"  href="https://x.com/Juancarlos_i18" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                            <a data-social="Youtube" style="--accent-color: #ff1717;"  href="https://www.youtube.com/@Juancarlos18" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                            <a data-social="Telegram" style="--accent-color: #4366ff;" href="https://t.me/juancarlos18i" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-                            <a data-social="WhatsApp" style="--accent-color: #05b84a;" href="https://wa.me/51968980650" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                        </div>
+                        <a data-social="Instagram" style="--accent-color: rgb(232, 31, 74);"
+                            href="https://www.instagram.com/juancarlos.i18/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a data-social="X" style="--accent-color: #2e2f33;" href="https://x.com/Juancarlos_i18"
+                            target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a data-social="Youtube" style="--accent-color: #ff1717;"
+                            href="https://www.youtube.com/@Juancarlos18" target="_blank"><i
+                                class="fa-brands fa-youtube"></i></a>
+                        <a data-social="Telegram" style="--accent-color: #4366ff;" href="https://t.me/juancarlos18i"
+                            target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                        <a data-social="WhatsApp" style="--accent-color: #05b84a;" href="https://wa.me/51968980650"
+                            target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
-            </div>
-            <div class="foot">
-                <p><i class="fa-brands fa-github"></i> <label class="author"></label></p>
             </div>
         </div>
-    </body>
+        <div class="foot">
+            <p><i class="fa-brands fa-github"></i> <label class="author"></label></p>
+        </div>
+    </div>
+</body>
+
 </html>
