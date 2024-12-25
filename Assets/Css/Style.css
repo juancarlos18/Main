@@ -5,7 +5,8 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background: linear-gradient(140deg, #141426, #000000, #130d1d);
+    /*background: linear-gradient(140deg, #141426, #000000, #130d1d);*/
+    background: linear-gradient(140deg, #191930, #000000, #15182f);
     transition: all .3s;
 }
 
@@ -88,17 +89,14 @@ body.light {
     backdrop-filter: blur(10px);
     padding: 0 0 20px 0px;
     width: min(380px, 88%);
-    height: 650px;
     align-items: center;
     border: 2px solid #ffffff11;
     border-radius: 20px;
     text-align: center;
-    margin: auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     overflow: hidden;
 }
 
@@ -109,7 +107,7 @@ body.light {
 .profile .data img {
     width: min(400px, 100%);
     height: auto;
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px;
 }
 
 .profile .data .name::before {
@@ -300,13 +298,15 @@ body.light {
     bottom: 0;
     width: 100%;
     text-align: center;
-    background: #00000091;
+    /*background: #00000091;*/
+    background: #00000000;
     padding-top: 5px;
     transition: all .3s;
 }
 
 .foot.light {
-    background: #0000000d;
+    /*background: #0000000d;*/
+    background: #00000000;
 }
 
 .foot p {
