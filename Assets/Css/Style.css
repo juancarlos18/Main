@@ -1,11 +1,14 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
 body {
     margin: 0;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    /*background: linear-gradient(140deg, #141426, #000000, #130d1d);*/
     background: linear-gradient(140deg, #191930, #000000, #15182f);
     transition: all .3s;
 }
@@ -21,7 +24,6 @@ body.light {
 .mode {
     text-align: center;
     margin: auto;
-    position: absolute;
     left: 0;
     right: 0;
     top: 0;
@@ -78,7 +80,6 @@ body.light {
 .profile {
     padding: 0;
     width: 100%;
-    height: 100%;
     overflow: hidden;
     margin: auto;
     position: relative;
@@ -94,10 +95,7 @@ body.light {
     border-radius: 20px;
     text-align: center;
     position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .profile .data.light {
@@ -294,7 +292,6 @@ body.light {
 /* Author */
 
 .foot {
-    position: absolute;
     bottom: 0;
     width: 100%;
     text-align: center;
