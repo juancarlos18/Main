@@ -1,16 +1,20 @@
 html {
     height: 100%;
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
+    min-height: 100vh;
     height: 100%;
     width: 100%;
+    margin: 0;
+    padding: 0;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(140deg, #191930, #000000, #15182f);
-    transition: all .3s;
+    background: linear-gradient(140deg, #191930, #000000, #151c2f);
+    box-sizing: border-box;
 }
 
 body.light {
@@ -80,7 +84,8 @@ body.light {
 .profile {
     padding: 0;
     width: 100%;
-    overflow: hidden;
+    height: 100%;
+    align-content: center;
     margin: auto;
     position: relative;
 }
@@ -105,7 +110,7 @@ body.light {
 .profile .data img {
     width: min(400px, 100%);
     height: auto;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     transition: all .3s;
 }
 
@@ -149,7 +154,7 @@ body.light {
     background: linear-gradient(to bottom, #f7f8ff, #f7f8ff00);
 }
 
-.row {
+.row-st {
     padding: 15px 30px;
 }
 
@@ -317,7 +322,8 @@ body.light {
 
 .foot .author {
     font-family: 'Poppins', sans-serif;
-    content: 'Juan Carlos Chapo\00F1 an S.  -  2004';
+    /*content: 'Juan Carlos Chapo\00F1 an S.  -  2004';*/
+    content: '2024';
     color: #ffffff82;
     font-size: 10px;
     font-weight: 600;
@@ -326,7 +332,8 @@ body.light {
 }
 
 .foot .author::before {
-    content: 'Juan Carlos Chapo\00F1 an S.  -  2004';
+    /* content: 'Juan Carlos Chapo\00F1 an S.  -  2004'; */
+    content: '2024';
 }
 
 .foot .author.light {
