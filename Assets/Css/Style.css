@@ -14,7 +14,8 @@ body {
     padding: 0;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(140deg, #191930, #000000, #151c2f);
+    /* background: linear-gradient(140deg, #191930, #000000, #151c2f); */
+    background: linear-gradient(140deg, #000000, #080409, #1e2128);
     box-sizing: border-box;
 }
 
@@ -27,13 +28,10 @@ body.light {
 /* Dark / Light mode */
 
 .mode {
+    position: absolute;
+    top: 20px;
+    right: 20px;
     text-align: center;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    padding-top: 5%;
 }
 
 .checkbox {
@@ -92,15 +90,19 @@ body.light {
 }
 
 .profile .data {
-    background-color: #0000001b;
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
     padding: 0 0 15px 0px;
-    width: min(350px, 88%);
+    width: min(430px, 88%);
     align-items: center;
-    border: 2px solid #ffffff11;
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     text-align: center;
     position: relative;
+    box-shadow:
+        0 8px 32px 0 rgba(31, 38, 135, 0.37),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
     /*overflow: hidden;*/
 }
 
@@ -109,9 +111,13 @@ body.light {
 }
 
 .profile .data img {
-    width: min(400px, 100%);
+    /* width: min(410px, 100%); */
+    width: 180px;
     height: auto;
-    border-radius: 20px 20px 0 0;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    /*border-radius: 20px 20px 0 0;*/
+    border-radius: 50%;
     transition: all .3s;
 }
 
@@ -123,6 +129,7 @@ body.light {
     font-family: 'Poppins', sans-serif;
 }
 
+/*
 .profile .data .footImg {
     position: relative;
     height: 90px;
@@ -134,6 +141,7 @@ body.light {
 .profile .data .footImg.light {
     background: linear-gradient(to bottom, #f7f8ff00, #f7f8ff);
 }
+*/
 
 .profile .data .name {
     background-image: -webkit-linear-gradient(180deg, rgb(250, 150, 10), rgb(10, 102, 250));
@@ -146,6 +154,7 @@ body.light {
     padding-top: 10px;
 }
 
+/*
 .profile .data .contBody {
     background: linear-gradient(to bottom, #000000, #00000000);
     transition: all .3s;
@@ -154,13 +163,28 @@ body.light {
 .profile .data .contBody.light {
     background: linear-gradient(to bottom, #f7f8ff, #f7f8ff00);
 }
+*/
+
+.profile .data .contBody .perfil_d {
+    display: block;
+    font-size: 14px;
+    color: #ffffffaa;
+    margin: 5px 40px 50px 40px;
+    font-family: 'Poppins', sans-serif;
+    line-break: normal;
+    transition: all .6s;
+}
+
+.profile .data .contBody .perfil_d.light {
+    color: #000000aa;
+}
 
 .row-st {
     padding: 15px 30px;
 }
 
 .profile .data .description {
-    margin-top: 5px;
+    margin-top: 25px;
     font-size: 14px;
     font-weight: 600;
     color: #FFFFFF;
@@ -168,7 +192,8 @@ body.light {
 }
 
 .profile .data .description::before {
-    content: 'Systems Engineer';
+    /* content: 'Systems Engineer'; */
+    content: 'Ingeniero de Sistemas';
 }
 
 .profile .data .description.light {
@@ -177,12 +202,14 @@ body.light {
 
 .profile .data .txtRow {
     font-size: 14px;
-    color: #ffffff85;
+    /* color: #ffffff85; */
+    color: #FFF;
     transition: all .6s;
 }
 
 .profile .data .txtRow::before {
-    content: 'Professional profile and contact';
+    /* content: 'Professional profile and contact'; */
+    content: 'Perfil profesional y contacto';
 }
 
 .profile .data .txtRow.light {
@@ -190,21 +217,44 @@ body.light {
 }
 
 .Content-Social .txtRowSocial {
-    color: #ffffff85;
+    /* color: #ffffff85; */
+    color: #FFF;
     font-size: 14px;
-    margin: 15px auto 10px auto;
+    margin: 20px auto 10px auto;
     font-family: 'Poppins', sans-serif;
     line-break: normal;
     transition: all .6s;
 }
 
 .Content-Social .txtRowSocial::before {
-    content: 'Social networks';
+    /* content: 'Social networks'; */
+    content: 'Redes sociales';
 }
 
 .Content-Social .txtRowSocial.light {
     color: #000000;
 }
+
+
+.btnViewPry {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    width: 100%;
+    background: #FFF;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all .6s;
+}
+
+.btnViewPry.light {
+    background: #000;
+    color: #FFF;
+}
+
 
 .Social {
     display: flex;
@@ -364,5 +414,19 @@ body.light {
 
     to {
         background-position: 680px -94px;
+    }
+}
+
+@media (max-width: 510px) {
+    .profile .data img {
+        margin-top: 30px;
+    }
+
+    .row-st {
+        padding: 0;
+    }
+
+    .profile .data {
+        padding: 0 20px 30px 20px;
     }
 }

@@ -17,6 +17,7 @@ $(document).ready(function () {
         document.getElementsByClassName('footImg')[0].classList.toggle("light");
         document.getElementsByClassName('contBody')[0].classList.toggle("light");
         document.getElementsByClassName('description')[0].classList.toggle("light");
+        document.getElementsByClassName('perfil_d')[0].classList.toggle("light");
         document.getElementsByClassName('txtRow')[0].classList.toggle("light");
 
         for (i = 0; i < tagA; i++) {
@@ -25,6 +26,7 @@ $(document).ready(function () {
 
         document.getElementsByTagName('button')[0].classList.toggle('light');
         document.getElementsByClassName('txtRowSocial')[0].classList.toggle("light");
+        document.getElementsByClassName('btnViewPry')[1].classList.toggle("light");
         document.getElementsByClassName('foot')[0].classList.toggle("light");
         document.getElementsByTagName('p')[1].classList.toggle('light');
         document.getElementsByClassName('author')[0].classList.toggle("light");
