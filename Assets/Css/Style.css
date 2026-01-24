@@ -443,15 +443,18 @@ body.light {
     }
 
     .profile .data {
-        padding: 0 20px 30px 20px;
+        padding: 10px 20px 30px 20px;
     }
 }
 
 /* Landscape / Horizontal mode */
 @media (max-height: 500px) {
-    body {
+
+    html,
+    body .profile {
         padding: 5px 0;
-        min-height: 100svh;
+        /* min-height: 100svh; */
+        height: auto;
     }
 
     .profile {
@@ -466,7 +469,6 @@ body.light {
 
     .profile .data img {
         width: 80px;
-        margin-top: 10px;
         margin-bottom: 5px;
     }
 
@@ -478,10 +480,6 @@ body.light {
     .profile .data .description {
         margin-top: 8px;
         font-size: 12px;
-    }
-
-    .profile .data .contBody .perfil_d {
-        display: none;
     }
 
     .row-st {
@@ -508,50 +506,4 @@ body.light {
         padding: 8px 15px;
         font-size: 13px;
     }
-
-    .Content-Social {
-        display: none;
-    }
 }
-
-/* Landscape / Horizontal mode */
-/* @media (orientation: landscape) {
-    html, body, .profile {
-        min-height: 100svh;
-        min-height: 100vh;
-        min-height: 100dvh;
-        height: auto;
-    }
-
-    body {
-        padding: 10px 0;
-    }
-
-    .profile {
-        min-height: auto;
-    }
-
-    .profile .data {
-        margin: 10px auto;
-    }
-
-    .profile .data img {
-        width: 120px;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-
-    .profile .data .contBody .perfil_d {
-        margin: 5px 20px 20px 20px;
-        font-size: 12px;
-    }
-
-    .row-st {
-        padding: 5px 15px;
-    }
-
-    .mode {
-        top: 10px;
-        right: 10px;
-    }
-} */
