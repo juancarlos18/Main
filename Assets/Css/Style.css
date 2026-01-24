@@ -6,6 +6,8 @@ html {
     min-height: 100dvh;
     min-height: 100vh;
     min-height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -17,20 +19,28 @@ body {
     align-items: center;
     /* background: linear-gradient(140deg, #191930, #000000, #151c2f); */
     background: linear-gradient(140deg, #000000, #080409, #1e2128);
+    background-attachment: fixed;
     box-sizing: border-box;
     min-height: 100dvh;
     min-height: 100vh;
     min-height: 100%;
+    min-height: 100svh;
+    height: 100svh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     -webkit-appearance: none;
     -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    overflow: auto;
+    overflow: hidden;
+    overscroll-behavior: none;
 }
 
 body.light {
@@ -100,9 +110,10 @@ body.light {
     height: 100%;
     min-height: 100vh;
     min-height: 100dvh;
+    min-height: 100svh;
     align-content: center;
     margin: auto;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -111,6 +122,8 @@ body.light {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    -webkit-user-select: none;
 }
 
 .profile .data {

@@ -23,7 +23,52 @@
             font-family: 'Poppins';
             src: url('Assets/Fonts/Poppins/Poppins-Regular.ttf');
         }
+        
+        /* Safari viewport height fix */
+        @supports (height: 100dvh) {
+            body, html, .profile {
+                height: 100dvh;
+            }
+        }
+        
+        @supports (height: 100svh) {
+            body, html, .profile {
+                height: 100svh;
+            }
+        }
     </style>
+    
+    <script>
+        // Ajuste dinámico de altura para Safari en iOS
+        function adjustHeight() {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', vh + 'px');
+            
+            const body = document.body;
+            const html = document.documentElement;
+            const profile = document.querySelector('.profile');
+            
+            const viewportHeight = window.innerHeight;
+            body.style.height = viewportHeight + 'px';
+            html.style.height = viewportHeight + 'px';
+            if (profile) {
+                profile.style.height = viewportHeight + 'px';
+            }
+        }
+        
+        window.addEventListener('load', adjustHeight);
+        window.addEventListener('resize', adjustHeight);
+        window.addEventListener('orientationchange', function() {
+            setTimeout(adjustHeight, 100);
+        });
+        
+        // Ejecutar inmediatamente
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', adjustHeight);
+        } else {
+            adjustHeight();
+        }
+    </script>
 </head>
 
 <body>
