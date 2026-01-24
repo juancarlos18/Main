@@ -24,6 +24,7 @@ body {
     min-height: 100svh;
     min-height: 100vh;
     min-height: 100dvh;
+    height: auto;
     -webkit-appearance: none;
     -webkit-user-select: none;
     -webkit-touch-callout: none;
@@ -444,5 +445,47 @@ body.light {
 
     .profile .data {
         padding: 0 20px 30px 20px;
+    }
+}
+
+/* Landscape / Horizontal mode */
+@media (orientation: landscape) {
+    html, body, .profile {
+        min-height: 100svh;
+        min-height: 100vh;
+        min-height: 100dvh;
+        height: auto;
+    }
+
+    body {
+        padding: 10px 0;
+    }
+
+    .profile {
+        min-height: auto;
+    }
+
+    .profile .data {
+        margin: 10px auto;
+    }
+
+    .profile .data img {
+        width: 120px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .profile .data .contBody .perfil_d {
+        margin: 5px 20px 20px 20px;
+        font-size: 12px;
+    }
+
+    .row-st {
+        padding: 5px 15px;
+    }
+
+    .mode {
+        top: 10px;
+        right: 10px;
     }
 }
