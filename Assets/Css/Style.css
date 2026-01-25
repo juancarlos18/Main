@@ -162,9 +162,9 @@ body.light {
 .profile .data .name {
     background-image: -webkit-linear-gradient(180deg, rgb(250, 150, 10), rgb(10, 102, 250));
     background-clip: text;
-    animation: AnimatedText 20s infinite linear;
+    /* animation: AnimatedText 20s infinite linear; */
     -webkit-background-clip: text;
-    -webkit-animation: AnimatedText 20s infinite linear;
+    /* -webkit-animation: AnimatedText 20s infinite linear; */
     background-size: 100%;
     color: transparent;
     padding-top: 10px;
@@ -311,7 +311,7 @@ body.light {
 
 .Social a::before,
 .Social button::before {
-    content: attr(data-social);
+    /* content: attr(data-social); */
     position: absolute;
     background-color: var(--accent-color);
     color: #FFF;
@@ -414,40 +414,90 @@ body.light {
     background: rgba(0, 0, 0, 0);
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0);
-    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
     margin-bottom: 10px;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
+    overflow: hidden;
 }
 
 .accordion-item.light {
     background-color: rgba(255, 255, 255, 0.1);
+    color: #000;
+    border: 2px solid rgba(0, 0, 0, 0.2);
 }
 
 .accordion-button {
     background: transparent !important;
     color: #FFF;
     border: none;
+    border: 1px solid transparent !important;
     font-weight: 500;
     padding: 15px 20px;
     transition: all 0.3s ease;
 }
 
+.accordion-button span {
+    color: #FFF;
+}
+
+.accordion-button span.light {
+    color: #000;
+
+}
+
+.accordion-button:hover {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 25px rgba(91, 111, 219, 0.4);
+    letter-spacing: 0.5px;
+}
+
+.accordion-button:hover.light {
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.4), 0 0 25px rgba(91, 111, 219, 0.3);
+    letter-spacing: 0.5px;
+}
+
 .accordion-button:focus {
     box-shadow: none;
-    background: rgba(255, 255, 255, 0.1) !important;
     color: #FFF;
 }
 
 .accordion-button.collapsed {
     color: #FFF;
     background: transparent;
+    border-radius: 0;
+}
+
+.accordion-button.collapsed.light {
+    color: #000000;
 }
 
 .accordion-button:not(.collapsed) {
     background: rgba(255, 255, 255, 0.15);
     color: #FFF;
+    border-radius: 0 !important;
+}
+
+.accordion-button:not(.collapsed).light {
+    background: rgba(0, 0, 0, 0.15);
+    color: #000000;
+}
+
+.accordion-collapse.show {
+    border-radius: 0 0 15px 15px;
+}
+
+/* Override Bootstrap accordion border-radius */
+.accordion-item:first-of-type {
+    border-radius: 15px !important;
+}
+
+.accordion-item:last-of-type {
+    border-radius: 15px !important;
+}
+
+.accordion-item:last-of-type>.accordion-collapse {
+    border-radius: 0 0 15px 15px !important;
 }
 
 .accordion-body {
@@ -457,11 +507,15 @@ body.light {
     color: #FFF;
 }
 
+.accordion-body.light {
+    color: #000000;
+}
+
 
 
 /* Animation */
 
-@keyframes AnimatedText {
+/* @keyframes AnimatedText {
     from {
         -webkit-filter: hue-rotate(0deg);
     }
@@ -469,7 +523,7 @@ body.light {
     to {
         -webkit-filter: hue-rotate(-360deg);
     }
-}
+} */
 
 @keyframes Light {
     from {
