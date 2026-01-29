@@ -30,7 +30,7 @@ body {
 }
 
 body.light {
-    background: linear-gradient(140deg, #9cb3f3, #ecedf7, #9b98f9);
+    background: linear-gradient(140deg, #9cb3f3, #ecedf7, #cdcbff);
 }
 
 
@@ -418,7 +418,7 @@ body.light {
     border-radius: 15px;
     margin-bottom: 10px;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
+    transition: all 0.6s ease;
     overflow: hidden;
 }
 
@@ -435,11 +435,12 @@ body.light {
     border: 1px solid transparent !important;
     font-weight: 500;
     padding: 15px 20px;
-    transition: all 0.3s ease;
+    transition: all 0.6s ease;
 }
 
 .accordion-button span {
     color: #FFF;
+    transition: all .6s;
 }
 
 .accordion-button span.light {
@@ -485,6 +486,25 @@ body.light {
 
 .accordion-collapse.show {
     border-radius: 0 0 15px 15px;
+}
+
+/* Smooth accordion transitions on iOS */
+.accordion-collapse,
+.accordion-collapse.collapsing {
+    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+    -webkit-transition: height .35s cubic-bezier(.4, 0, .2, 1);
+    transition: height .35s cubic-bezier(.4, 0, .2, 1);
+    will-change: height;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.accordion-body {
+    -webkit-transition: opacity .25s ease, padding .25s ease;
+    transition: opacity .25s ease, padding .25s ease;
 }
 
 /* Override Bootstrap accordion border-radius */
