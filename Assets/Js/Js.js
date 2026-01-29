@@ -52,3 +52,52 @@ $(document).ready(function () {
         }
     });
 });
+
+// Smooth accordion height animation for iOS
+(function () {
+    var isIOS = /iP(ad|hone|od)/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    if (!isIOS) return;
+
+    // mark body so CSS rules scoped to iOS apply only on detected devices
+    try { document.body.classList.add('ios-accordion'); } catch (e) {}
+
+    // Use Bootstrap collapse events to adjust inline height for smoother transitions on iOS
+    $(document).on('show.bs.collapse', '.accordion-collapse', function (e) {
+        var el = e.target;
+        el.style.overflow = 'hidden';
+        el.style.height = '0px';
+        el.style.transition = 'height .35s cubic-bezier(.4,0,.2,1)';
+        var full = el.scrollHeight + 'px';
+        requestAnimationFrame(function () {
+            el.style.height = full;
+        });
+    });
+
+    $(document).on('shown.bs.collapse', '.accordion-collapse', function (e) {
+        var el = e.target;
+        el.style.height = '';
+        el.style.transition = '';
+        el.style.overflow = '';
+    });
+
+    $(document).on('hide.bs.collapse', '.accordion-collapse', function (e) {
+        var el = e.target;
+        el.style.overflow = 'hidden';
+        // set current height then animate to 0
+        el.style.height = el.scrollHeight + 'px';
+        // force reflow
+        void el.offsetHeight;
+        el.style.transition = 'height .35s cubic-bezier(.4,0,.2,1)';
+        requestAnimationFrame(function () {
+            el.style.height = '0px';
+        });
+    });
+
+    $(document).on('hidden.bs.collapse', '.accordion-collapse', function (e) {
+        var el = e.target;
+        el.style.height = '';
+        el.style.transition = '';
+        el.style.overflow = '';
+    });
+
+})();

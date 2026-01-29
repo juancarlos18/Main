@@ -488,9 +488,9 @@ body.light {
     border-radius: 0 0 15px 15px;
 }
 
-/* Smooth accordion transitions on iOS */
-.accordion-collapse,
-.accordion-collapse.collapsing {
+/* Smooth accordion transitions on iOS (scoped with .ios-accordion) */
+.ios-accordion .accordion-collapse,
+.ios-accordion .accordion-collapse.collapsing {
     -webkit-overflow-scrolling: touch;
     overflow: hidden;
     -webkit-transition: height .35s cubic-bezier(.4, 0, .2, 1);
@@ -502,7 +502,7 @@ body.light {
     transform: translateZ(0);
 }
 
-.accordion-body {
+.ios-accordion .accordion-body {
     -webkit-transition: opacity .25s ease, padding .25s ease;
     transition: opacity .25s ease, padding .25s ease;
 }
